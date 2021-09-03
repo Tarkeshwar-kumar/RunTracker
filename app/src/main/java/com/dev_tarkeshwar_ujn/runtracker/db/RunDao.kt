@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
-interface RunDAO {
+interface RunDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRun(run: Run)
@@ -39,3 +39,4 @@ interface RunDAO {
     @Query("SELECT AVG(avgSpeedInKMH) FROM running_table")
     fun getTotalAvgSpeed(): LiveData<Float>
 }
+//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
